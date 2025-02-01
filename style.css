@@ -6,24 +6,26 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
 }
 
 :root {
-    --bg-color: black;
-    --second-bg-color: black;
-    --text-color: white;
-    --main-color: rgb(181, 245, 181);
-}
-
-html{
-    font-size: 60%;
-    overflow-x: hidden;
+    --bg-color: var(--cal-poly-green);   
+    --text-color: black;
+    --pistachio: #9DD164ff;
+    --avocado: #5E7E29ff;
+    --cal-poly-green: #244816ff;
+    --reseda-green: #757A45ff;
+    --moss-green: #A0A15Dff;
+    --sage: #CAD19Cff;
+    --cream: #F6FEC3ff;
+    --beige: #f0ecd6;
+    --ivory: #F3F8ECff;
 }
 
 body{
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: var(--beige);
+    color: var(--cal-poly-green);
 }
 
 .header {
@@ -31,7 +33,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    background: #000000;
+    background: var(--cal-poly-green); 
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -43,26 +45,25 @@ body{
 
 .logo {
     font-size: 3rem;
-    color: var(--text-color);
+    color: white;
     font-weight: 800;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
 .logo:hover {
-    color: green;
-    text-shadow: 0 0 25px lightgreen,
-                 0 0 50px lightblue;
+    color: var(--avocado);
+    text-shadow: 0 0 25px var(--cream);
     transform: scale(1.1);
 }
 
 .logo span {
-    text-shadow: 0 0 25px var(--main-color);
+    text-shadow: 0 0 25px var(--cal-poly-green);
 }
 
 .navbar a{
     font-size: 18px;
-    color: var(--text-color);
+    color: white;
     font-weight: 500;
     margin: 0 20px;
     border-bottom: 3px solid transparent;
@@ -71,20 +72,20 @@ body{
 
 .navbar a:hover,
 .navbar a.active{
-    color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
+    color: var(--cal-poly-green);
+    border-bottom: 3px solid var(--cal-poly-green);
 }
 
 #menu-icon{
     font-size: 3.6rem;
-    color: var(--main-color);
+    color: var(--pistachio);
     display: none
 }
 
 .home{
     width: 100%;
     min-height: 100vh;
-    background: white;
+    background: var(--beige);
     display: flex;
     align-items: center;
     gap: 7em;
@@ -95,6 +96,8 @@ body{
     max-width: 800px;
 }
 .home-content h3{
+    font-family: 'Times', serif;
+    font-weight: 900;
     font-size: 42px;
 }
 .home-content h1{
@@ -123,7 +126,7 @@ body{
     cursor: pointer;
 }
 .btn-1:hover{
-    background-color: greenyellow;
+    background-color: var(--moss-green);
     border: 2px solid green;
     color: white;
 }
@@ -140,7 +143,7 @@ body{
     cursor: pointer;
 }
 .btn-2:hover{
-    background-color: greenyellow;
+    background-color: var(--pistachio);
     color: white;
 }
 
@@ -148,11 +151,11 @@ body{
     width: 15px;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: blue;
+    background-color: var(--sage);
 }
 ::-webkit-scrollbar-track{
-    background-color: blueviolet;
-    width: 50px;
+    background-color: color-mix(in srgb, color percentage, color percentage);
+    width: 20px;
 }
 
 .about{
