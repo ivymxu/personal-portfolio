@@ -362,9 +362,13 @@ span{
     background-color: color-mix(in srgb, color percentage, color percentage);
     width: 20px;
 }
+.projects{
+    padding: 100px 15px;
+    background: var(--beige);
+}
 .bento-grid{
     flex: 1;
-    height: 600px;
+    height: 700px;
     display: flex;
     gap: 1em;
     padding: 0 4em;
@@ -373,13 +377,11 @@ span{
     flex: 2;
     display: flex;
     flex-direction: column;
-    gap: 1em;
 }
 .col-right{
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1em;
 }
 .box{
     flex: 1;
@@ -405,13 +407,9 @@ span{
 .inner-box:hover{
     opacity: 1;
     transform: scale(1.02);
-    box-shadow: 0 0 25px var(--cal-poly-green);
+    box-shadow: 0 0 15px var(--cal-poly-green);
 }
-.col-right .box:hover{
-    opacity: 1;
-    transform: scale(1.02);
-    box-shadow: 0 0 25px var(--cal-poly-green);
-}
+
 img{
     width: 100%;
     height: 100%;
@@ -421,10 +419,19 @@ img{
     overflow: hidden;
 }
 
+.col-left .box, .col-right .box {
+    margin: 0; /* Remove any default margin */
+    flex: 1; /* Ensure boxes take equal space */
+}
+
 @media(max-width:1200px){
     section{
         flex-direction: column;
         margin: 10em 2em;
         padding: 10% 5%;
     }
+}
+.art{
+    padding: 100px 15px;
+    background: var(--beige);
 }
