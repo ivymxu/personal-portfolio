@@ -244,7 +244,7 @@ span{
 }
 
 .about{
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 12% 8%;
@@ -272,4 +272,93 @@ span{
     color: white;
     font-size: 20px;
     margin: 2em 0 3em;
+}
+
+.heading{
+    font-size: 8rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 5rem 0;
+}
+.experience{
+    padding: 100px 15px;
+    background: var(--beige);
+}
+.experience h2{
+    margin-bottom: 5rem;
+}
+.timeline-items{
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: auto;
+}
+.timeline-items::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: var(--cal-poly-green);
+    left: calc(50% - 1px);
+}
+.timeline-item{
+    margin-bottom: 40px;
+    position: relative;
+    width: 100%;
+}
+.timeline-item:last-child{
+    margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.timeline-dot{
+    height: 21px;
+    width: 21px;
+    background-color: var(--cal-poly-green);
+    box-shadow: 0 0 25px var(--cal-poly-green),
+                0 0 25px var(--cal-poly-green);
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+.timeline-date{
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--cal-poly-green);
+    margin: 6px 0 15px;
+}
+.timeline-content{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--cal-poly-green);
+}
+.timeline-content h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--cal-poly-green);
+    margin: 1rem 0;
+}
+.timeline-content p{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--cal-poly-green);
+    margin: 1rem 0;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--sage);
+}
+::-webkit-scrollbar-track{
+    background-color: color-mix(in srgb, color percentage, color percentage);
+    width: 20px;
 }
