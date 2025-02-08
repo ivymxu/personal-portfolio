@@ -11,7 +11,7 @@
 
 :root {
     --bg-color: var(--cal-poly-green);   
-    --text-color: black;
+    --text-color: #69005a;
     --pistachio: #9DD164ff;
     --avocado: #5E7E29ff;
     --cal-poly-green: #244816ff;
@@ -24,8 +24,9 @@
 }
 
 body{
-    background: var(--beige);
-    color: var(--cal-poly-green);
+    background: url('images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
 }
 
 .header {
@@ -33,7 +34,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--cal-poly-green); 
+    background: var(--text-color); 
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -47,7 +48,6 @@ body{
     font-size: 3rem;
     color: white;
     font-weight: 800;
-    cursor: pointer;
     transition: 0.3s ease;
 }
 .logo:hover {
@@ -84,7 +84,6 @@ section{
 .home{
     width: 100%;
     min-height: 100vh;
-    background: var(--beige);
     display: flex;
     align-items: center;
     gap: 7em;
@@ -94,13 +93,29 @@ section{
     max-width: 800px;
 }
 .home-content h3{
-    font-family: 'Times', serif;
+    font-family: 'Trebuchet MS', sans-serif;
     font-weight: 900;
-    font-size: 42px;
+    font-size: 20px;
+}
+.home-content h2{
+    font-size: 40px;
+    font-family: Tahoma, sans-serif;
+    font-weight: 600;
+    margin: 20px 0;
+}
+.home-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+    font-family: Tahoma, sans-serif;
+}
+.home-content dl{
+    font-size: 18px;
+    margin: 25px 0 30px;
+    font-family: Tahoma, sans-serif;
 }
 
 span{
-    color: var(--pistachio);
+    color: plum;
     font-weight: 400;
 }
 .logo span {
@@ -110,30 +125,24 @@ span{
     font-size: 62px;
     line-height: 1.2;
 }
-.home-content p{
-    font-size: 18px;
-    margin: 25px 0 30px;
-}
 .social-icons a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 4.5rem;
-    height: 4.5rem;
-    background: var(--cal-poly-green);
-    font-size: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--text-color);
+    font-size: 2rem;
     border-radius: 50%;
     color: var(--beige);
-    text-decoration: none; /* Remove underline from links */
-    margin: 3rem 1.5rem 3rem 0;
+    margin: 0.5rem;
     transition: 0.3s ease-in-out;
 }
 .social-icons a:hover{
-    color: var(--cal-poly-green);
-    transform: scale(1.1)translateY(-5px);
-    box-shadow: 0 0 25px #A0A15Dff;
-    background-color: var(--avocado);
-    background: var(--pistachio);
+    color: var(--text-color);
+    transform: scale(1.05)translateY(-1px);
+    box-shadow: 0 0 5px var(--text-color);
+    background-color: plum;
 }
 
 .btn{
@@ -143,7 +152,6 @@ span{
     border-radius: 4rem;
     font-size: 1.6rem;
     color: black;
-    cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 
@@ -160,30 +168,24 @@ span{
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;   
+    align-items: center;
 }
 .text-animation span{
     position: relative;
 }
 .text-animation span::before{
     content: "Aspiring Generalist";
-    color: var(--avocado);
-    animation: words 20s infinite;
+    color: var(--text-color);
+    animation: words 8s infinite;
 }
 .text-animation span::after{
     content: "";
-    background-color: var(--beige);
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    border-left: 3px solid var(--beige);
     right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(20) infinite;
 }
-@keyframes cursor{
-    to{
-        border-left: 2px solid var(--avocado);
-    }
-}
+
 @keyframes words{
     0%,
     20% {
@@ -206,73 +208,6 @@ span{
         content: "Person";
     }
 }
-@keyframes typing{
-    10%,
-    15%,
-    30%,
-    35%,
-    50%,
-    55%,
-    70%,
-    75%,
-    90%,
-    95%{
-        width: 0;
-    }
-    5%,
-    20%,
-    25%,
-    40%,
-    45%,
-    60%,
-    65%,
-    80%,
-    85%{
-        width: calc(100% + 8px);
-    }
-}
-
-::-webkit-scrollbar{
-    width: 15px;
-}
-::-webkit-scrollbar-thumb{
-    background-color: var(--sage);
-}
-::-webkit-scrollbar-track{
-    background-color: color-mix(in srgb, color percentage, color percentage);
-    width: 20px;
-}
-
-.about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12% 8%;
-    gap: 10em;
-    background: black; 
-}
-.about-img img{
-    position: relative;
-    width: 550px;
-    box-shadow: 0 0 25px rgb(161, 207, 161),
-                0 0 25px rgb(161, 207, 161);
-    border-radius: 50%;
-}
-.about-content h2{
-    text-align: left;
-    color: white;
-    font-size: 42px;
-}
-.about-content h3{
-    font-size: 62px;
-    color: white;
-}
-
-.about-content p{
-    color: white;
-    font-size: 20px;
-    margin: 2em 0 3em;
-}
 
 .heading{
     font-size: 4rem;
@@ -282,7 +217,6 @@ span{
 }
 .experience{
     padding: 100px 15px;
-    background: var(--beige);
 }
 .experience h2{
     margin-bottom: 5rem;
@@ -352,19 +286,8 @@ span{
     margin: 1rem 0;
 }
 
-::-webkit-scrollbar{
-    width: 15px;
-}
-::-webkit-scrollbar-thumb{
-    background-color: var(--sage);
-}
-::-webkit-scrollbar-track{
-    background-color: color-mix(in srgb, color percentage, color percentage);
-    width: 20px;
-}
 .projects{
     padding: 100px 15px;
-    background: var(--beige);
 }
 .bento-grid{
     flex: 1;
@@ -414,6 +337,7 @@ img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    align-items: center;
 }
 .col-right .box{
     overflow: hidden;
@@ -433,139 +357,58 @@ img{
 }
 .art{
     padding: 100px 0px;
-    background: var(--beige);
 }
-
-@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
-@import url('https://fonts.cdnfonts.com/css/poppins');
-
-.banner{
+.slider{
     width: 100%;
-    height: 80vh;
-    text-align: center;
+    height: var(--height);
     overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+}
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
     position: relative;
 }
-.banner .slider{
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
     position: absolute;
-    width: 200px;
-    height: 250px;
-    top: 10%;
-    left: calc(50% - 100px);
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    animation: autoRun 20s linear infinite;
-    z-index: 2;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
+}
+.slider .list .item img{
+    width: 100%;
+    border-radius: 1em;
 }
 @keyframes autoRun{
     from{
-        transform: perspective(1000px) rotateX(-5deg) rotateY(0deg);
+        left: 100%;
     }to{
-        transform: perspective(1000px) rotateX(-5deg) rotateY(360deg);
+        left: calc(var(--width) * -1);
     }
 }
-
-.banner .slider .item{
-    position: absolute;
-    inset: 0 0 0 0;
-    transform: 
-        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-        translateZ(550px);
+.slider:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
 }
-.banner .slider .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.slider .item:hover{
+    filter: grayscale(0);
 }
-.banner .content{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(1400px, 100vw);
-    height: max-content;
-    padding-bottom: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
+.slider[reverse="true"] .item{
+    animation: reversePlay 10s linear infinite;
 }
-.banner .content h1{
-    font-family: 'ICA Rubrik';
-    font-size: 16em;
-    line-height: 1em;
-    color: #25283B;
-    position: relative;
-}
-.banner .content h1::after{
-    position: absolute;
-    inset: 0 0 0 0;
-    content: attr(data-content);
-    z-index: 2;
-    -webkit-text-stroke: 2px #d2d2d2;
-    color: transparent;
-}
-.banner .content .author{
-    font-family: Poppins;
-    text-align: right;
-    max-width: 200px;
-}
-.banner .content h2{
-    font-size: 3em;
-}
-.banner .content .model{
-    background-image: url(images/model.png);
-    width: 100%;
-    height: 75vh;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-size: auto 130%;
-    background-repeat: no-repeat;
-    background-position: top center;
-    z-index: 1;
-}
-@media screen and (max-width: 1023px) {
-    .banner .slider{
-        width: 160px;
-        height: 200px;
-        left: calc(50% - 80px);
-    }
-    .banner .slider .item{
-        transform: 
-            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-            translateZ(300px);
-    }
-    .banner .content h1{
-        text-align: center;
-        width: 100%;
-        text-shadow: 0 10px 20px #000;
-        font-size: 7em;
-    }
-    .banner .content .author{
-        color: #fff;
-        padding: 20px;
-        text-shadow: 0 10px 20px #000;
-        z-index: 2;
-        max-width: unset;
-        width: 100%;
-        text-align: center;
-        padding: 0 30px;
-    }
-}
-@media screen and (max-width: 767px) {
-    .banner .slider{
-        width: 100px;
-        height: 150px;
-        left: calc(50% - 50px);
-    }
-    .banner .slider .item{
-        transform: 
-            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-            translateZ(180px);
-    }
-    .banner .content h1{
-        font-size: 5em;
+@keyframes reversePlay{
+    from{
+        left: calc(var(--width) * -1);
+    }to{
+        left: 100%;
     }
 }
