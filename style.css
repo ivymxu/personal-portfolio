@@ -27,6 +27,7 @@ body{
     background: url('images/background.png') no-repeat center center fixed;
     background-size: cover;
     color: var(--text-color);
+    font-family: 'Tahoma', sans-serif;
 }
 
 .header {
@@ -34,17 +35,16 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--text-color); 
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
-    padding: 35px 12%;
+    margin: 1rem;
+    padding: 35px 5%;
     z-index: 5;
 }
 
-.logo {
+/*.logo {
     font-size: 3rem;
     color: white;
     font-weight: 800;
@@ -54,21 +54,21 @@ body{
     color: var(--avocado);
     text-shadow: 0 0 25px var(--cream);
     transform: scale(1.1);
-}
+} */
 
 .navbar a{
     font-size: 18px;
-    color: white;
+    color: lightgoldenrodyellow;
     font-weight: 500;
-    margin: 0 20px;
+    margin: 5px 20px;
     border-bottom: 3px solid transparent;
     transition: 0.3s ease;
 }
 
 .navbar a:hover,
 .navbar a.active{
-    color: var(--cal-poly-green);
-    border-bottom: 3px solid var(--cal-poly-green);
+    color: var(--text-color);
+    border-bottom: 3px solid var(--text-color);
 }
 
 #menu-icon{
@@ -104,12 +104,12 @@ section{
     margin: 20px 0;
 }
 .home-content p{
-    font-size: 18px;
-    margin: 25px 0 30px;
+    font-size: 20px;
+    margin: 30px 0 30px;
     font-family: Tahoma, sans-serif;
 }
 .home-content dl{
-    font-size: 18px;
+    font-size: 20px;
     margin: 25px 0 30px;
     font-family: Tahoma, sans-serif;
 }
@@ -118,12 +118,19 @@ span{
     color: plum;
     font-weight: 400;
 }
-.logo span {
+.logo span{
     text-shadow: 0 0 25px var(--cal-poly-green);
 }
 .home-content h1{
     font-size: 62px;
     line-height: 1.2;
+}
+.social-icons{
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
 }
 .social-icons a{
     display: inline-flex;
@@ -134,38 +141,50 @@ span{
     background: var(--text-color);
     font-size: 2rem;
     border-radius: 50%;
-    color: var(--beige);
+    color: lightgoldenrodyellow;
     margin: 0.5rem;
     transition: 0.3s ease-in-out;
 }
 .social-icons a:hover{
     color: var(--text-color);
-    transform: scale(1.05)translateY(-1px);
+    transform: scale(1.02)translateY(-1px);
     box-shadow: 0 0 5px var(--text-color);
-    background-color: plum;
+    background-color: lightgoldenrodyellow;
 }
 
-.btn{
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: beige;
-    border-radius: 4rem;
-    font-size: 1.6rem;
-    color: black;
-    transition: 0.3s ease-in-out;
+.profile h3{
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Times New Roman', serif;
+    font-weight: 900;
+    margin-top: 3rem;
+    text-shadow: 0 0 20px lightgoldenrodyellow;
 }
-
-.btn:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 50px #9DD164ff;
+.profile h2{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 1.5rem 10%;
 }
-.btn-group{
-    display: flex;
+.profile h1{
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin: 1.5rem 0;
+    font-family: 'Tacoma', sans-serif;
+}
+.profile img{
+    object-fit: cover;
+    width: 325px;
+    height: 350px;
+    display: block;
+    margin-top: 2rem;
     align-items: center;
-    gap: 1.5rem;
+    margin: 2rem auto 0;
 }
+
 .text-animation{
-    font-size: 34px;
+    font-size: 25px;
     font-weight: 600;
     min-width: 280px;   
     align-items: center;
@@ -174,7 +193,7 @@ span{
     position: relative;
 }
 .text-animation span::before{
-    content: "Aspiring Generalist";
+    content: "";
     color: var(--text-color);
     animation: words 8s infinite;
 }
@@ -188,32 +207,66 @@ span{
 
 @keyframes words{
     0%,
+    10% {
+        content: "Growth-Minded";
+    }
+    11%,
     20% {
-        content: "Data Analyst";
+        content: "Creative Thinker";
     }
     21%,
+    30% {
+        content: "Tech Enthusiast";
+    }
+    31%,
     40% {
-        content: "Product Manager";
+        content: "Data-Driven";
     }
     41%,
-    60% {
-        content: "Software Engineer";
+    50% {
+        content: "Problem Solver";
     }
-    61%,
-    80% {
+    51%,
+    60% {
         content: "Life-Long Learner";
     }
-    81%,
-    100%{
-        content: "Person";
+    61%,
+    70% {
+        content: "Art Lover";
     }
+    80% {
+        content: "Eager Collaborator";
+    }
+    81%,
+    90% {
+        content: "Sustainability Advocate";
+    }
+    91%,
+    100%{
+        content: "Community Builder";
+    }
+}
+.to-experience {
+    display: block;
+    padding: 10px 10px;
+    background-color: #69005a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    text-align: center;
+    position: sticky;
+    bottom: 20px; 
+    right: 20px;
 }
 
 .heading{
-    font-size: 4rem;
-    font-weight: 600;
-    text-align: center;
-    margin: 5rem 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
 }
 .experience{
     padding: 100px 15px;
@@ -228,30 +281,28 @@ span{
     position: relative;
     margin: auto;
 }
-.timeline-items::before{
+/*.timeline-items::before{
     content: "";
     position: absolute;
     width: 5px;
     height: 100%;
     background: var(--cal-poly-green);
     left: calc(50% - 1px);
-}
+}*/
 .timeline-item{
     margin-bottom: 40px;
     position: relative;
     width: 100%;
+    padding-left: calc(50% + 50px);
+    text-align: left;
+    display: flex;
+    align-items: center;
 }
 .timeline-item:last-child{
     margin-bottom: 0;
 }
-.timeline-item:nth-child(odd){
-    padding-right: calc(50% + 30px);
-    text-align: right;
-}
-.timeline-item:nth-child(even){
-    padding-left: calc(50% + 30px);
-}
-.timeline-dot{
+
+/*.timeline-dot{
     height: 21px;
     width: 21px;
     background-color: var(--cal-poly-green);
@@ -262,27 +313,24 @@ span{
     border-radius: 50%;
     top: 10px;
 }
-.timeline-date{
+*/
+.timeline-date {
     font-size: 20px;
-    font-weight: 800;
-    color: var(--cal-poly-green);
-    margin: 6px 0 15px;
+    font-weight: 500;
+    margin-right: 25px;
 }
 .timeline-content{
     font-size: 20px;
     font-weight: 500;
-    color: var(--cal-poly-green);
 }
 .timeline-content h3{
     font-size: 24px;
     font-weight: 700;
-    color: var(--cal-poly-green);
     margin: 1rem 0;
 }
 .timeline-content p{
     font-size: 18px;
     font-weight: 500;
-    color: var(--cal-poly-green);
     margin: 1rem 0;
 }
 
