@@ -53,44 +53,63 @@
             <button class="next-section" onclick="scrollToExperience()"><i class='bx bx-down-arrow-alt'></i></button>
         </div>
     </section>
+
     <section class="experience" id="experience">
-        <h2 class="heading">EXPERIENCE</h2>
-        <div class="timeline-items">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Jan 2025 -<br>Apr 2025</div>
-                <div class="timeline-content">
+        <div class="experience-container">
+            <div class="experience-details">
+                <div id="experience-1" class="experience-tab-content">
                     <h3>Supply Chain Intern</h3>
                     <p>PepsiCo - Quaker Plant</p>
+                    <p>Details about the Supply Chain Intern experience...</p>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">May 2024 -<br>Aug 2024</div>
-                <div class="timeline-content">
+                <div id="experience-2" class="experience-tab-content">
                     <h3>Compliance Audit Intern</h3>
                     <p>Alberta Energy Regulator</p>
+                    <p>Details about the Compliance Audit Intern experience...</p>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Oct 2024 -<br>Feb 2025</div>
-                <div class="timeline-content">
+                <div id="experience-3" class="experience-tab-content">
                     <h3>Technical Product Manager</h3>
                     <p>Develop for Good</p>
+                    <p>Details about the Technical Product Manager experience...</p>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Sep 2023 -<br>Present</div>
-                <div class="timeline-content">
+                <div id="experience-4" class="experience-tab-content">
                     <h3>Campus Involvement</h3>
                     <p>University of Waterloo</p>
+                    <p>Details about the Campus Involvement experience...</p>
                 </div>
-                
             </div>
-            <button class="next-section" onclick="scrollToProjects()"><i class='bx bx-down-arrow-alt'></i></button>
-
+            <div class="timeline-items">
+                <h3>EXPERIENCE</h3>
+                <button class="timeline-item" onclick="showExperience('experience-1')">
+                    <div class="timeline-date">Jan 2025 -<br>Apr 2025</div>
+                    <div class="timeline-content">
+                        <h3>Supply Chain Intern</h3>
+                        <p>PepsiCo - Quaker Plant</p>
+                    </div>
+                </button>
+                <button class="timeline-item" onclick="showExperience('experience-2')">
+                    <div class="timeline-date">May 2024 -<br>Aug 2024</div>
+                    <div class="timeline-content">
+                        <h3>Compliance Audit Intern</h3>
+                        <p>Alberta Energy Regulator</p>
+                    </div>
+                </button>
+                <button class="timeline-item" onclick="showExperience('experience-3')">
+                    <div class="timeline-date">Oct 2024 -<br>Feb 2025</div>
+                    <div class="timeline-content">
+                        <h3>Technical Product Manager</h3>
+                        <p>Develop for Good</p>
+                    </div>
+                </button>
+                <button class="timeline-item" onclick="showExperience('experience-4')">
+                    <div class="timeline-date">Sep 2023 -<br>Present</div>
+                    <div class="timeline-content">
+                        <h3>Campus Involvement</h3>
+                        <p>University of Waterloo</p>
+                    </div>
+                </button>
+                <button class="next-section" onclick="scrollToProjects()"><i class='bx bx-down-arrow-alt'></i></button>
+            </div>
         </div>
     </section>
 
