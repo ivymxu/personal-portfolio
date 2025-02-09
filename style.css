@@ -24,7 +24,7 @@
 }
 
 body{
-    background: url('images/background.png') no-repeat center center fixed;
+    background: url('assets/background.png') no-repeat center center fixed;
     background-size: cover;
     color: var(--text-color);
     font-family: 'Tahoma', sans-serif;
@@ -39,7 +39,6 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem;
     padding: 35px 5%;
     z-index: 5;
 }
@@ -99,14 +98,14 @@ section{
 }
 .home-content h2{
     font-size: 40px;
-    font-family: Tahoma, sans-serif;
+    font-family: 'Tahoma', sans-serif;
     font-weight: 600;
     margin: 20px 0;
 }
 .home-content p{
     font-size: 20px;
     margin: 30px 0 30px;
-    font-family: Tahoma, sans-serif;
+    font-family: 'Tahoma', sans-serif;
 }
 .home-content dl{
     font-size: 20px;
@@ -273,20 +272,22 @@ span{
     font-size: 20px;
 }
 .experience{
-    padding: 100px 15px;
+    padding: 6rem 15px;
 }
 .experience h2{
     margin-bottom: 5rem;
 }
+
 .experience-container{
-    margin: 1.5rem;
+    margin: 1rem;
 }
+
 .timeline-items{
     max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    margin: auto;
+    margin-top: -2rem;
 }
 /*.timeline-items::before{
     content: "";
@@ -325,16 +326,25 @@ span{
     display: flex;
     margin: 1.5rem;
 }
-.experience-details .images{
+.experience-details .assets{
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     height: auto;
-    width: 15rem;
-    margin: 2rem auto 0;
-    margin-bottom: 3.5rem;
-    margin-top: -1rem;
+    width: 10.5rem;
+    margin: 0 auto 0;
+    margin-bottom: 3rem;
+}
+.experience-details .tools{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 3.5rem;
+    margin: 3rem auto 0;
+    gap: 1.5rem; 
 }
 .experience-details {
     flex: 1;
@@ -344,6 +354,8 @@ span{
     align-items: center;
     margin-right: 3rem;
     margin-left: 3rem;
+    box-shadow: 0 0 25px lemonchiffon;
+    border-radius: 10%;
 }
 
 .experience-tab-content {
@@ -417,9 +429,10 @@ span{
 }
 .timeline-content h3 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 00;
     margin: 1rem 0;
     text-align: left;
+    font-family: 'Tahoma', sans-serif;
 }
 .timeline-content p {
     font-size: 18px;
