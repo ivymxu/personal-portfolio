@@ -278,6 +278,9 @@ span{
 .experience h2{
     margin-bottom: 5rem;
 }
+.experience-container{
+    margin: 1.5rem;
+}
 .timeline-items{
     max-width: 1200px;
     display: flex;
@@ -380,6 +383,7 @@ span{
     font-family: 'Trebuchet MS', sans-serif;
     font-weight: 900;
     font-size: 25px;
+    margin-top: 2rem;
     margin-bottom: 2.5rem;
 }
 
@@ -398,14 +402,16 @@ span{
     background-color: rgba(255, 250, 205, 0.368);
 }
 .timeline-item.active {
-    background-image: linear-gradient(to bottom right, 
-    rgba(208, 130, 181, 0.589), rgb(183, 183, 241));
-    color: lemonchiffon;
+    background-color: rgba(255, 250, 205, 0.368);
+    box-shadow: #69005a 0 0 10px;
+   /* background-image: linear-gradient(to bottom right, 
+    rgba(208, 130, 181, 0.589), rgb(183, 183, 241)); */
 } 
 .timeline-date {
     font-size: 20px;
     font-weight: 500;
-    margin-right: 3.5rem;
+    margin-left: 1.5rem;
+    margin-right: 3rem;
     text-align: left;
 }
 .timeline-content h3 {
@@ -423,6 +429,14 @@ span{
 
 .projects{
     padding: 100px 15px;
+    margin: 4rem;
+}
+.projects h2{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    margin: 2rem;
+    text-align: center;
 }
 .bento-grid{
     flex: 1;
@@ -432,12 +446,13 @@ span{
     padding: 0 4em;
 }
 .col-left{
-    flex: 2;
+    flex: 1;
     display: flex;
     flex-direction: column;
+    margin-right: -1.5rem;
 }
 .col-right{
-    flex: 1;
+    flex: 2;
     display: flex;
     flex-direction: column;
 }
@@ -448,6 +463,8 @@ span{
     gap: 1em;
     transition: 0.2s ease-in-out;
     border-radius: 1em;
+    margin: 2rem;
+    margin-bottom: 2rem;
 }
 .inner-box{
     flex: 1;
@@ -455,13 +472,11 @@ span{
     overflow: hidden;
     opacity: 0.8;
     transition: 0.2s ease-in-out;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    border: #000 solid;
 }
-.col-left .inner-box:nth-of-type(1){
-    flex: 2;
-}
-.col-left .box:nth-of-type(2) .inner-box:nth-last-of-type(2){
-    flex: 1;
-}
+
 .inner-box:hover{
     opacity: 1;
     transform: scale(1.02);
