@@ -320,6 +320,7 @@ span{
 
 .experience-container {
     display: flex;
+    margin: 1.5rem;
 }
 .experience-details .images{
     flex: 1;
@@ -338,6 +339,7 @@ span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 4rem;
 }
 
 .experience-tab-content {
@@ -372,8 +374,15 @@ span{
 
 .timeline-items {
     display: flex;
-    flex: 1.67;
+    flex: 1.46;
 }
+.timeline-items h2{ 
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    margin-bottom: 2.5rem;
+}
+
 .timeline-item {
     display: flex;
     padding: 10px;
@@ -386,26 +395,26 @@ span{
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .timeline-item:hover {
-    background-color: lemonchiffon;
+    background-color: rgba(255, 250, 205, 0.368);
 }
 .timeline-item.active {
     background-image: linear-gradient(to bottom right, 
     rgba(208, 130, 181, 0.589), rgb(183, 183, 241));
     color: lemonchiffon;
 } 
-.timeline-item .timeline-date {
+.timeline-date {
     font-size: 20px;
     font-weight: 500;
-    margin-right: 25px;
+    margin-right: 3.5rem;
     text-align: left;
 }
-.timeline-item .timeline-content h3 {
+.timeline-content h3 {
     font-size: 24px;
     font-weight: 700;
     margin: 1rem 0;
     text-align: left;
 }
-.timeline-item .timeline-content p {
+.timeline-content p {
     font-size: 18px;
     font-weight: 500;
     margin: 1rem 0;
