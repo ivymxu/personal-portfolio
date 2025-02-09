@@ -246,11 +246,11 @@ span{
         content: "Community Builder";
     }
 }
-.to-experience {
+.next-section {
     display: block;
     padding: 10px 10px;
     background-color: #69005a;
-    color: white;
+    color: lemonchiffon;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -261,6 +261,11 @@ span{
     position: sticky;
     bottom: 20px; 
     right: 20px;
+}
+
+.next-section:hover {
+    background-color: lemonchiffon;
+    color: #69005a;
 }
 
 .heading{
