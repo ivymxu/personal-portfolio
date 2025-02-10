@@ -453,9 +453,8 @@ span{
     text-align: center;
 }
 .bento-grid{
-    flex: 1;
-    height: 700px;
     display: flex;
+    flex-wrap: wrap;
     gap: 1em;
     padding: 0 4em;
 }
@@ -470,31 +469,37 @@ span{
     display: flex;
     flex-direction: column;
 }
+.left-box{
+    flex: 1;
+    display: flex;
+    padding: 1em;
+    gap: 1em;
+    transition: 0.2s ease-in-out;
+    border-radius: 1.5em;
+    margin: 0;
+    height: 100%;
+}
 .box{
     flex: 1;
     display: flex;
     padding: 1em;
     gap: 1em;
     transition: 0.2s ease-in-out;
-    border-radius: 1em;
-    margin: 2rem;
-    margin-bottom: 2rem;
+    border-radius: 1.5em;
+    height: 100%;
 }
 .inner-box{
     flex: 1;
-    border-radius: 1em;
+    border-radius: 1.5em;
     overflow: hidden;
-    opacity: 0.8;
+    margin: 5rem 0rem;
     transition: 0.2s ease-in-out;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
-    border: #000 solid;
 }
 
 .inner-box:hover{
     opacity: 1;
     transform: scale(1.02);
-    box-shadow: 0 0 15px var(--cal-poly-green);
+    box-shadow: 0 0 15px lavenderblush;
 }
 
 img{
@@ -515,13 +520,19 @@ img{
 @media(max-width:1200px){
     section{
         flex-direction: column;
-        margin: 10em 2em;
         padding: 10% 5%;
     }
 }
 .art{
     padding: 100px 0px;
 }
+.art h2{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    margin: 5rem;
+    margin-left: 10rem;
+    }
 .slider{
     width: 100%;
     height: var(--height);
