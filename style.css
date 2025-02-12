@@ -247,6 +247,8 @@ span{
 }
 .next-section {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px 10px;
     background-color: #69005a;
     color: lemonchiffon;
@@ -258,7 +260,9 @@ span{
     transition: background-color 0.3s ease;
     text-align: center;
     bottom: 20px; 
-    right: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    margin: 1rem 0;
 }
 
 .next-section:hover {
@@ -363,14 +367,14 @@ span{
     padding: 3rem;
 }
 .experience-tab-content h3{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     margin: 1rem 0;
     text-align: left;
 }
 
 .experience-tab-content ul{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     margin: 1rem 0;
     text-align: left;
@@ -378,7 +382,7 @@ span{
 }
 
 .experience-tab-content p{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     margin: 1rem 0;
     text-align: left;
@@ -402,11 +406,11 @@ span{
 
 .timeline-item {
     display: flex;
-    padding: 10px;
+    padding: 1rem;
     cursor: pointer;
     background-color: transparent;
     border-radius: 20px;
-    border-width: 3px;
+    border-width: 1ch;
     margin-right: 200px;
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -586,4 +590,25 @@ img{
     }to{
         left: 100%;
     }
+}
+
+@keyframes popUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pop-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.pop-up.visible {
+    animation: popUp 0.6s forwards;
 }
