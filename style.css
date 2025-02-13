@@ -496,7 +496,7 @@ span{
     flex: 1;
     border-radius: 1.5em;
     overflow: hidden;
-    margin: 5rem 0rem;
+    margin-right: 1rem;
     transition: 0.2s ease-in-out;
 }
 
